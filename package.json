@@ -1,0 +1,28 @@
+{
+  "name": "@kasperpihl/loglib",
+  "private": false,
+  "version": "0.0.5",
+  "description": "Logging util for QB",
+  "main": "dist/logs.main.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "esbuild --bundle src/logs.main.ts --platform=node --target=es2019 --outfile=dist/logs.main.js",
+    "postbuild": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "files": [
+    "dist/*"
+  ],
+  "types": "dist/logs.main.d.ts",
+  "author": "Kasper Pihl Tornoe",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.11.20",
+    "esbuild": "0.20.1",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "colorette": "2.0.20"
+  }
+}

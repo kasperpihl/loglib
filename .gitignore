@@ -1,0 +1,9 @@
+.log-history.json
+
+*.log
+npm-debug.log*
+.DS_Store
+cache
+
+node_modules
+dist
